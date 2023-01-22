@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+	section.user-box(data-section='user')
+		.colorlib-narrow-content
+			.row
+				.col-md-6.col-md-offset-3.col-md-pull-3.animate-box(data-animate-effect='fadeInLeft')
+					span.heading-meta Log Book
+					h2.colorlib-heading User List
+			.row
+				.col-md-5
+					table.table
+						thead
+							tr
+								th Username
+								th Role
+								th
+						tbody
+							each user in users
+								tr
+									td= user.username
+									td= user.role
+									td
+										//- a.btn.btn-primary(href=`/users/${user._id}`) Edit

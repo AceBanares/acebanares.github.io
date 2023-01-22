@@ -1,0 +1,40 @@
+extends layout
+
+block content
+	section#colorlib-hero.js-fullheight(data-section='home')
+		.flexslider.js-fullheight
+			ul.slides
+				li(style='background-image: url(images/img_bg_1.jpg);')
+					.overlay
+					.container-fluid
+						.row
+							.col-md-6.col-md-offset-3.col-md-pull-3.col-sm-12.col-xs-12.js-fullheight.slider-text
+								.slider-text-inner.js-fullheight
+									.desc
+										h1
+											| Hi!
+											br
+											| I am Ace.
+										h2
+											| I aspire to be a programmer.
+										p
+											a.btn.btn-primary.btn-learn(href='https://linkedin.com/in/acegreggorebanares', target='_blank')
+												| LinkedIn 
+												i.icon-download4
+				li(style='background-image: url(images/img_bg_2.jpg);')
+					.overlay
+					.container-fluid
+						.row
+							.col-md-6.col-md-offset-3.col-md-pull-3.col-sm-12.col-xs-12.js-fullheight.slider-text
+								.slider-text-inner
+									.desc
+										h1
+											| Hello!
+											br
+											| I amaze.
+										h2
+											| My skills can be of good use.
+										p
+											a.btn.btn-primary.btn-learn(href='https://github.com/AceBanares', target='_blank')
+												| GitHub 
+												i.icon-briefcase3

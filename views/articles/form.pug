@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+	section.article-box(data-section='article')
+		.colorlib-narrow-content
+			.row
+				.col-md-6.col-md-offset-3.col-md-pull-3.animate-box(data-animate-effect='fadeInLeft')
+					span.heading-meta Form
+					h2.colorlib-heading= title
+					form(method="POST")
+						.form-group
+							input.form-control(type="text" value=article.title placeholder="Title" name="title")
+						.form-group
+							input.form-control(type="text" value=article.authors placeholder="Authors" name="authors")
+						.form-group
+							textarea#message.form-control(type="text" cols='30' rows='7' placeholder="Body" name="body")= article.body
+						.form-group
+							input.btn.btn-primary.btn-send-message(type="submit" value='Submit')

@@ -1,0 +1,39 @@
+extends ../layout.pug
+
+block content
+	section.colorlib-blog(data-section='blog')
+		.colorlib-narrow-content
+			.row
+				.col-md-6.col-md-offset-3.col-md-pull-3.animate-box(data-animate-effect='fadeInLeft')
+					span.heading-meta Archive
+					h2.colorlib-heading Recent Blog
+			.row
+				.col-md-12.animate-box
+					p
+						a.btn.btn-primary.btn-lg.btn-load-more(href="/articles/create")
+							| Create an Article
+			.row
+				each article in articles
+					.col-md-4.col-sm-6.animate-box(data-animate-effect='fadeInLeft')
+						.blog-entry
+							a.blog-img(href=`/articles/${article._id}`)
+								img.img-responsive(src='images/blog-1.jpg', alt='HTML5 Bootstrap Template by colorlib.com')
+							.desc
+								a(href=`/articles/${article._id}`).btn.btn-sm.btn-outline-secondary(type='button') View
+								a(href=`/articles/${article._id}/edit`).btn.btn-sm.btn-outline-secondary(type='button') Edit
+								form(action=`/articles/${article._id}/delete` method="post").btn.btn-sm.btn-outline-secondary(type='button')
+									button(type="submit") DELETE
+								span
+									small= article.date 
+									|  
+									small= article.authors
+									|  
+									small
+										i.icon-bubble3
+										|  4
+								//- h3
+								//- 	a(href='blog.html')= article.title
+								//- p= article.body					
+						//- a.btn.btn-primary.btn-lg.btn-load-more(href='#')
+						//- 	| Load more 
+						//- 	i.icon-reload

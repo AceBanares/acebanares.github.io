@@ -1,0 +1,28 @@
+nav#colorlib-main-menu.navbar(role='navigation')
+	ul
+		li
+			a(href='/' data-nav-section='home') Home
+		li
+			a(href='/about' data-nav-section='about') About
+		li
+			a(href='/skills' data-nav-section='skills') Skills
+		li
+			a(href='/education' data-nav-section='education') Education
+		li
+			a(href='/experience' data-nav-section='experience') Experience
+		li
+			a(href='/work' data-nav-section='work') Work
+		li
+			a(href='/contact' data-nav-section='contact') Contact
+		li
+			a(href='/articles' data-nav-section='articles') Articles
+		if isLoggedIn	
+			li
+				a(href='/users' data-nav-section='users') Users
+			li
+				a(href='/logout' data-nav-section='logout') Logout
+		else
+			li
+				a(href='/register' data-nav-section='register') Register
+			li
+				a(href='/login' data-nav-section='login') Login

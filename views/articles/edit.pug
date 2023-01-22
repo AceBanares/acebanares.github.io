@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+	section.article-box(data-section='article')
+		.colorlib-narrow-content
+			.row
+				.col-md-6.col-md-offset-3.col-md-pull-3.animate-box(data-animate-effect='fadeInLeft')
+					span.heading-meta Edit
+					h2.colorlib-heading Edit an Article
+					form(method="POST")
+						input(type="text" value=article.title placeholder="Title" name="title")
+						input(type="text" value=article.authors placeholder="Authors" name="authors")
+						textarea(type="text" placeholder="body" name="body")= article.body
+						button(type="submit") Submit

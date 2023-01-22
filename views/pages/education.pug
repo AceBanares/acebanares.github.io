@@ -1,0 +1,75 @@
+extends ../layout
+
+block content
+    section.colorlib-education(data-section='education')
+        .colorlib-narrow-content
+            .row
+                .col-md-6.col-md-offset-3.col-md-pull-3.animate-box(data-animate-effect='fadeInLeft')
+                    span.heading-meta Education
+                    h2.colorlib-heading.animate-box Education
+            .row
+                .col-md-12.animate-box(data-animate-effect='fadeInLeft')
+                    .fancy-collapse-panel
+                        #accordion.panel-group(role='tablist', aria-multiselectable='true')
+                            .panel.panel-default
+                                #headingOne.panel-heading(role='tab')
+                                    h4.panel-title
+                                        a(data-toggle='collapse', data-parent='#accordion', href='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                                            | Computer Programmer
+                                #collapseOne.panel-collapse.collapse.in(role='tabpanel', aria-labelledby='headingOne')
+                                    .panel-body
+                                        .row
+                                            .col-md-6
+                                                p
+                                                    | Georgian College
+                                            .col-md-6
+                                                p
+                                                    | 2018-2022
+                            .panel.panel-default
+                                #headingTwo.panel-heading(role='tab')
+                                    h4.panel-title
+                                        a.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseTwo', aria-expanded='false', aria-controls='collapseTwo')
+                                            | Bachelor of Science in Computer Science
+                                #collapseTwo.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingTwo')
+                                    .panel-body
+                                        .row
+                                            .col-md-6
+                                                p
+                                                    | Batangas State University -  
+                                                    strong Philippines
+                                            .col-md-6
+                                                p
+                                                    | 2007-2011
+                            .panel.panel-default
+                                #headingThree.panel-heading(role='tab')
+                                    h4.panel-title
+                                        a.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseThree', aria-expanded='false', aria-controls='collapseThree')
+                                            | Programming Certification
+                                #collapseThree.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingThree')
+                                    .panel-body
+                                        p
+                                            | AMA Computer Learning Center -  
+                                            strong Philippines
+                                        ul
+                                            li Two months of preparation for certification exam
+                                            li Successfully passed exam and earned a certificate
+                            .panel.panel-default
+                                #headingFour.panel-heading(role='tab')
+                                    h4.panel-title
+                                        a.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseFour', aria-expanded='false', aria-controls='collapseFour')
+                                            | Secondary Education
+                                #collapseFour.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingFour')
+                                    .panel-body
+                                        p
+                                            | Manila Science High School -  
+                                            strong Philippines
+                            .panel.panel-default
+                                #headingFive.panel-heading(role='tab')
+                                    h4.panel-title
+                                        a.collapsed(data-toggle='collapse', data-parent='#accordion', href='#collapseFive', aria-expanded='false', aria-controls='collapseFive')
+                                            | Primary Education
+                                #collapseFive.panel-collapse.collapse(role='tabpanel', aria-labelledby='headingFive')
+                                    .panel-body
+                                        p
+                                            | Pedro Guevarra Elementary School -  
+                                            strong Philippines

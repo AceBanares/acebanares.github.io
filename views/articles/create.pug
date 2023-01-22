@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+	section.article-box(data-section='article')
+		.colorlib-narrow-content
+			.row
+				.col-md-6.col-md-offset-3.col-md-pull-3.animate-box(data-animate-effect='fadeInLeft')
+					span.heading-meta Create
+					h2.colorlib-heading Create an Article
+					form(method="POST")
+						input(type="text" placeholder="Title" name="title")
+						input(type="text" placeholder="Authors" name="authors")
+						textarea(type="text" placeholder="body" name="body")
+						button(type="submit") Submit
+					.testbox
