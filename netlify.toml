@@ -2,4 +2,3 @@
     funcions = "bin"
 [dev]
     command = "npm start" # Command to start your dev server
-    targetPort = 3000
