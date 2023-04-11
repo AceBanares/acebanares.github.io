@@ -24,6 +24,7 @@
     "pug": "^3.0.2"
   },
   "devDependencies": {
+    "netlify-cli": "^13.2.2",
     "nodemon": "^2.0.20"
   }
 }
