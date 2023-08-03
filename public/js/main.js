@@ -149,6 +149,7 @@
 
 	// Reflect scrolling in navigation
 	var navActive = function (section) {
+		// alert(section);
 		var $el = $('.navbar > ul');
 		$el.find('li').removeClass('active');
 		$el.each(function () {
@@ -263,11 +264,11 @@
 				// alert('Scrolled to Page Bottom');
 				var $el = $('#nav li.active').removeClass('active');
 				var $next = $el.next();
-
+				
 				if ($next.length == 0) $next = $('#nav li:first');
-
+				
 				$next.addClass('active');
-
+				
 				// Added window.location.href to follow the selected links href
 				window.location.href = $next.find('a.nav-button').attr('href');
 			}
@@ -275,8 +276,8 @@
 	};
 
 	// leave space to scroll up
-	var startAt1 = function () {
-		$("html,body").scrollTop(1);
+	var startAt = function (xAxis) {
+		$("html,body").scrollTop(xAxis);
 	};
 
 	// Document on load.
@@ -291,7 +292,7 @@
 		// navActive();
 		navigationSection();
 		windowScroll();
-		startAt1();
+		startAt(1);
 
 		mobileMenuOutsideClick();
 		sliderMain();

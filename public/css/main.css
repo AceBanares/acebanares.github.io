@@ -136,6 +136,12 @@ iframe {
 
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
+
+.breakAll {
+  word-break: break-all;
+  white-space: normal;
+}
+
 .txt1 {
   font-family: Poppins-Regular;
   font-size: 15px;
