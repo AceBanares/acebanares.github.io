@@ -260,7 +260,8 @@
 				// Added window.location.href to follow the selected links href
 				window.location.href = $prev.find('a.nav-button').attr('href');
 			}
-			else if ($(window).scrollTop() >= $(document).height() - $(window).height() - 10) {
+			else if (Math.ceil($(window).scrollTop()) >= $(document).height() - $(window).height() - 1) {
+				// alert(`${Math.ceil($(window).scrollTop())}, ${$(document).height() - $(window).height()}`); 
 				// alert('Scrolled to Page Bottom');
 				var $el = $('#nav li.active').removeClass('active');
 				var $next = $el.next();
@@ -292,7 +293,7 @@
 		// navActive();
 		navigationSection();
 		windowScroll();
-		startAt(10);
+		startAt(1);
 
 		mobileMenuOutsideClick();
 		sliderMain();
