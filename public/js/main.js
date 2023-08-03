@@ -260,7 +260,7 @@
 				// Added window.location.href to follow the selected links href
 				window.location.href = $prev.find('a.nav-button').attr('href');
 			}
-			else if ($(window).scrollTop() >= $(document).height() - $(window).height() - 1) {
+			else if ($(window).scrollTop() >= $(document).height() - $(window).height() - 10) {
 				// alert('Scrolled to Page Bottom');
 				var $el = $('#nav li.active').removeClass('active');
 				var $next = $el.next();
@@ -292,7 +292,7 @@
 		// navActive();
 		navigationSection();
 		windowScroll();
-		startAt(1);
+		startAt(10);
 
 		mobileMenuOutsideClick();
 		sliderMain();
