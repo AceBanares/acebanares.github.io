@@ -222,7 +222,7 @@ figure {
 
 #colorlib-main {
   background-color: #fff;
-  min-height: 101vh;
+  min-height: 120vh;
   width: calc(100% - 300px);
   float: right;
   -webkit-transition: 0.5s;

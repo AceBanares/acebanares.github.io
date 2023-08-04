@@ -248,28 +248,32 @@
 
 	var windowScroll = function () {
 		$(window).scroll(function () {
-			if ($(window).scrollTop() == 0) {
+			var bottom =$(document).height() - $(window).height() - 1;
+			var scroll = $(window).scrollTop();
+			
+			if (scroll == 0) {
 				// alert('Scrolled to Page Top');
 				var $el = $('#nav li.active').removeClass('active');
 				var $prev = $el.prev();
-
+				
 				if ($prev.length == 0) $prev = $('#nav li:last');
-
+				
 				$prev.addClass('active');
-
+				
 				// Added window.location.href to follow the selected links href
 				window.location.href = $prev.find('a.nav-button').attr('href');
 			}
-			else if (Math.ceil($(window).scrollTop()) >= $(document).height() - $(window).height() - 1) {
-				// alert(`${Math.ceil($(window).scrollTop())}, ${$(document).height() - $(window).height()}`); 
+			else if (scroll >= bottom) {
 				// alert('Scrolled to Page Bottom');
 				var $el = $('#nav li.active').removeClass('active');
 				var $next = $el.next();
+				// alert(`${scroll}, ${bottom}`);
 				
 				if ($next.length == 0) $next = $('#nav li:first');
 				
 				$next.addClass('active');
 				
+				window.scrollTo(0, bottom - 10);
 				// Added window.location.href to follow the selected links href
 				window.location.href = $next.find('a.nav-button').attr('href');
 			}
