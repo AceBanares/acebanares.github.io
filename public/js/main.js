@@ -53,16 +53,16 @@
 
 	// Animations
 	var contentWayPoint = function () {
-		
+
 		var i = 0;
 
 		$('.animate-box').waypoint(function (direction) {
 			if (direction === 'down' && !$(this.element).hasClass('animated')) {
-				
+
 				i++;
 				$(this.element).addClass('item-animate');
-				
-				setTimeout(function () {					
+
+				setTimeout(function () {
 					$('body .animate-box.item-animate').each(function (k) {
 						var el = $(this);
 						setTimeout(function () {
@@ -106,7 +106,7 @@
 		$(document).click(function (e) {
 
 			var container = $("#colorlib-aside, .js-colorlib-nav-toggle");
-			
+
 			if (!container.is(e.target) && container.has(e.target).length === 0) {
 				if ($('body').hasClass('offcanvas')) {
 
@@ -248,18 +248,18 @@
 
 	var windowScroll = function () {
 		$(window).scroll(function () {
-			var bottom =$(document).height() - $(window).height() - 1;
+			var bottom = $(document).height() - $(window).height() - 1;
 			var scroll = $(window).scrollTop();
-			
+
 			if (scroll == 0) {
 				// alert('Scrolled to Page Top');
 				var $el = $('#nav li.active').removeClass('active');
 				var $prev = $el.prev();
-				
+
 				if ($prev.length == 0) $prev = $('#nav li:last');
-				
+
 				$prev.addClass('active');
-				
+
 				// Added window.location.href to follow the selected links href
 				window.location.href = $prev.find('a.nav-button').attr('href');
 			}
@@ -268,14 +268,15 @@
 				var $el = $('#nav li.active').removeClass('active');
 				var $next = $el.next();
 				// alert(`${scroll}, ${bottom}`);
-				
+
 				if ($next.length == 0) $next = $('#nav li:first');
-				
+
 				$next.addClass('active');
-				
-				window.scrollTo(0, bottom - 10);
+
 				// Added window.location.href to follow the selected links href
-				window.location.href = $next.find('a.nav-button').attr('href');
+				setTimeout(function() {
+					location = $next.find('a.nav-button').attr('href');
+				}, 1000);
 			}
 		});
 	};
@@ -283,6 +284,13 @@
 	// leave space to scroll up
 	var startAt = function (xAxis) {
 		$("html,body").scrollTop(xAxis);
+	};
+
+	var pageChange = function() {
+		$(window).on('beforeunload', function(e) {
+			e.preventDefault();
+			e.returnValue = '';
+		 });
 	};
 
 	// Document on load.
@@ -296,8 +304,9 @@
 		clickMenu();
 		// navActive();
 		navigationSection();
-		windowScroll();
-		startAt(1);
+		// windowScroll();
+		// startAt(1);
+		// pageChange();
 
 		mobileMenuOutsideClick();
 		sliderMain();

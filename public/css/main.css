@@ -137,6 +137,11 @@ iframe {
 /*//////////////////////////////////////////////////////////////////
 [ Utility ]*/
 
+.stopScroll {
+  height: 100%;
+  overflow: hidden;
+}
+
 .breakAll {
   word-break: break-all;
   white-space: normal;

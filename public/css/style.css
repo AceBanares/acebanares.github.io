@@ -235,6 +235,7 @@ figure {
 
 #colorlib-hero {
   min-height: 500px;
+  /* <a href="https://iconscout.com/lotties/progress-bar" target="_blank">Free Progress bar Animated Icon</a> by <a href="https://iconscout.com/contributors/savan">Savan Makadiya</a> on <a href="https://iconscout.com">IconScout</a> */
   background: #fff url(../images/loader.gif) no-repeat center center;
   width: 100%;
   float: left;
